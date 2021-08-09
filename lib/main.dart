@@ -58,6 +58,7 @@ class _MyAppState extends State<MyApp> {
   void reset() {
     setState(() {
       _questionIndex = 0;
+      _totalScore = 0;
     });
   }
 
@@ -67,6 +68,8 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Home"),
+          backgroundColor: Colors.black,
+          brightness: Brightness.dark,
         ),
         body: _questionIndex < questions.length
             ? Quiz(

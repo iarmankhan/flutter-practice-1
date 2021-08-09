@@ -13,16 +13,21 @@ class Result extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Yay, your total score is " + totalScore.toString(),
-              style: TextStyle(fontSize: 25),
+            Container(
+              margin: EdgeInsets.only(bottom: 20),
+              child: Text(
+                "Total score: " + totalScore.toString(),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              ),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: reset,
               child: Text("Play Again"),
-              color: Colors.blue,
-              textColor: Colors.white,
-            )
+              style: ElevatedButton.styleFrom(
+                primary: Colors.black,
+                onPrimary: Colors.white,
+              ),
+            ),
           ],
         ),
       ),
